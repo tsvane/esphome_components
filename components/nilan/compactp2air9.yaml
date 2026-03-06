@@ -542,42 +542,7 @@ sensor:
     accuracy_decimals: 0
     register_type: read
     address: 1104
-# DPT.AirFlow1 2201 m3/h Calculated air flow 1
-  - platform: modbus_controller
-    modbus_controller_id: nilan_modbus_controller
-    name: "Air Flow 1"
-    id: air_flow_1
-    unit_of_measurement: 'm³/h'
-    accuracy_decimals: 0
-    register_type: read
-    address: 2201
-# DPT.AirFlow2 2202 m3/h Calculated air flow 2
-  - platform: modbus_controller
-    modbus_controller_id: nilan_modbus_controller
-    name: "Air Flow 2"
-    id: air_flow_2
-    unit_of_measurement: 'm³/h'
-    accuracy_decimals: 0
-    register_type: read
-    address: 2202
-# DPT.Pressure1 2221 Pa Calculated air pressure 1
-  - platform: modbus_controller
-    modbus_controller_id: nilan_modbus_controller
-    name: "Air Pressure 1"
-    id: air_pressure_1
-    unit_of_measurement: 'Pa'
-    accuracy_decimals: 0
-    register_type: read
-    address: 2221
-# DPT.Pressure2 2222 Pa Calculated air pressure 2
-  - platform: modbus_controller
-    modbus_controller_id: nilan_modbus_controller
-    name: "Air Pressure 2"
-    id: air_pressure_2
-    unit_of_measurement: 'Pa'
-    accuracy_decimals: 0
-    register_type: read
-    address: 2222
+    
 
 #     ████████ ███████ ██   ██ ████████     ███████ ███████ ███    ██ ███████  ██████  ██████  ███████ 
 #        ██    ██       ██ ██     ██        ██      ██      ████   ██ ██      ██    ██ ██   ██ ██      
