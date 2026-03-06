@@ -322,6 +322,18 @@ sensor:
     address: 220
     filters:
       - multiply: 0.01
+# AirQual.RH 221 100 % Humidity sensor value
+  - platform: modbus_controller
+    modbus_controller_id: nilan_modbus_controller
+    name: "Humidity"
+    id: humidity
+    unit_of_measurement: '%'
+    accuracy_decimals: 1
+    device_class: humidity
+    register_type: read
+    address: 221
+    filters:
+      - multiply: 0.01
 # AirTemp.TempInletSet 1201 100 °C Inlet temperature request (T7 setpoint)
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
@@ -667,9 +679,7 @@ text_sensor:
     modbus_controller_id: nilan_modbus_controller
     name: "Humidity"
     id: humidity
-    unit_of_measurement: '%'
     accuracy_decimals: 1
-    device_class: humidity
     register_type: read
     address: 221
     filters:
