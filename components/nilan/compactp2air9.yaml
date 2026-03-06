@@ -348,7 +348,7 @@ sensor:
       - multiply: 0.01
     on_value: 
       - lambda: !lambda |-
-          id(humidity).publish_state( (x < 35) ? "Too Dry" : 
+          id(aqi_humidity).publish_state( (x < 35) ? "Too Dry" : 
                                           (x < 65) ? "Perfect" : 
                                           "Too Humid");
 # AirTemp.TempInletSet 1201 100 °C Inlet temperature request (T7 setpoint)
@@ -613,6 +613,10 @@ sensor:
 
 
 text_sensor:
+  - platform: template
+    name: "Air Quality Index Humidity (AQI)"
+    id: aqi_humidity
+    icon: mdi:water-percent 
   - platform: template
     name: "Alarm 1 DateTime"
     id: alarm_list_1_datetime
