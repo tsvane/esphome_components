@@ -860,8 +860,7 @@ number:
     device_class: temperature
     register_type: holding
     address: 1800
-    filters:
-      - multiply: 0.01
+    multiply: 0.01
 # CentralHeat.SupplyMin 1802 100 °C Min supply temperature
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
@@ -871,8 +870,7 @@ number:
     device_class: temperature
     register_type: holding
     address: 1802
-    filters:
-      - multiply: 0.01
+    multiply: 0.01
 # CentralHeat.SupplyMax 1803 100 °C Max supply temperature
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
@@ -882,8 +880,7 @@ number:
     device_class: temperature
     register_type: holding
     address: 1803
-    filters:
-      - multiply: 0.01
+    multiply: 0.01
 # CentralHeat.SupplyOffset 1804 100 °C Outdoor temperature compensation
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
@@ -893,8 +890,7 @@ number:
     device_class: temperature
     register_type: holding
     address: 1804
-    filters:
-      - multiply: 0.01
+    multiply: 0.01
 # CentralHeat.CurveSelect 1805 1 Temp. compensation curve: 1-10
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
