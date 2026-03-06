@@ -334,6 +334,23 @@ sensor:
     address: 221
     filters:
       - multiply: 0.01
+# AirQual.RH 221 100 % Humidity sensor value
+  - platform: modbus_controller
+    modbus_controller_id: nilan_modbus_controller
+    name: "Humidity Status"
+    id: nilan_humidity_status
+    unit_of_measurement: '%'
+    accuracy_decimals: 1
+    device_class: humidity
+    register_type: read
+    address: 221
+    filters:
+      - multiply: 0.01
+    on_value: 
+      - lambda: !lambda |-
+          id(aqi_humidity).publish_state( (x < 35) ? "Too Dry" : 
+                                          (x < 65) ? "Perfect" : 
+                                          "Too Humid");
 # AirTemp.TempInletSet 1201 100 °C Inlet temperature request (T7 setpoint)
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
@@ -674,21 +691,6 @@ text_sensor:
 #       ██   ██ ██████  ██████  ██   ██ ███████ ███████ ███████        ███████  ██████   ██████  
 
 
-# AirQual.RH 221 100 % Humidity sensor value
-  - platform: modbus_controller
-    modbus_controller_id: nilan_modbus_controller
-    name: "Humidity"
-    id: humidity
-    accuracy_decimals: 1
-    register_type: read
-    address: 221
-    filters:
-      - multiply: 0.01
-    on_value: 
-      - lambda: !lambda |-
-          id(aqi_humidity).publish_state( (x < 35) ? "Too Dry" : 
-                                          (x < 65) ? "Perfect" : 
-                                          "Too Humid");
 # AirQual.CO2 222 ppm Carbon dioxide sensor value
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
