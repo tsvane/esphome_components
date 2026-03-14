@@ -230,8 +230,8 @@ climate:
       temperature_step:
         target_temperature: 0.5
         current_temperature: 0.1
-        min_humidity: 30%
-        max_humidity: 70%
+      min_humidity: 30%
+      max_humidity: 70%
 
 output:
   - platform: modbus_controller
