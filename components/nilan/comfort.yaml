@@ -7,7 +7,7 @@ packages:
 
 sensor:
   - platform: template
-    name: "Calculated difference exhaust and inlet"
+    name: "Calculated Difference Exhaust and Inlet"
     id: calculated_value_inlet_exhaust
     icon: "mdi:thermometer"
     unit_of_measurement: °C
@@ -19,7 +19,7 @@ sensor:
 #########################
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Heat exchange efficiency"
+    name: "Heat Exchange Efficiency"
     id: nilan_heat_exchange_efficiency
     unit_of_measurement: '%'
     accuracy_decimals: 1
@@ -33,7 +33,7 @@ sensor:
 ###########################
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Cooling set temperature"
+    name: "Cooling Set Temperature"
     id: nilan_cooling_set_temp
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -45,7 +45,7 @@ sensor:
       
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Min summer temperature"
+    name: "Min Summer Temperature"
     id: nilan_min_summer_temp
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -57,7 +57,7 @@ sensor:
   
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Min winter temperature"
+    name: "Min Winter Temperature"
     id: nilan_min_winter_temp
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -69,7 +69,7 @@ sensor:
   
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Max summer temperature"
+    name: "Max Summer Temperature"
     id: nilan_max_summer_temp
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -81,7 +81,7 @@ sensor:
   
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Max winter temperature"
+    name: "Max Winter Temperature"
     id: nilan_max_winter_temp
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -96,7 +96,7 @@ binary_sensor:
 #### INPUT REGISTERS ####
 #########################
   - platform: template
-    name: "Air filter alarm"
+    name: "Air Filter Alarm"
     id: nilan_filter_alarm
     lambda: !lambda |-
       return (id(nilan_alarm_list_1_id).state == 19
@@ -105,7 +105,7 @@ binary_sensor:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Door open"
+    name: "Door Open"
     id: nilan_door_open
     register_type: read
     address: 102
@@ -113,7 +113,7 @@ binary_sensor:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Motor thermo fuse"
+    name: "Motor Thermo Fuse"
     id: nilan_motor_thermo_fuse
     register_type: read
     address: 104
@@ -121,15 +121,15 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Heating surface frost⁄overheat"
-    id: nilan_heating_surface_frost_oerheat
+    name: "Heating Surface Frost⁄Overheat"
+    id: nilan_heating_surface_frost_overheat
     register_type: read
     address: 105
     bitmask: 1
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Airflow monitor"
+    name: "Airflow Monitor"
     id: nilan_airflow_monitor
     register_type: read
     address: 106
@@ -137,7 +137,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Low pressure switch"
+    name: "Low Pressure Switch"
     id: nilan_low_pressure
     register_type: read
     address: 108
@@ -145,7 +145,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User function 2"
+    name: "User Function 2"
     id: nilan_user_function_2
     register_type: read
     address: 113
@@ -153,7 +153,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Air damper closed"
+    name: "Air Damper Closed"
     id: nilan_damper_closed
     register_type: read
     address: 114
@@ -161,7 +161,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Air damper opened"
+    name: "Air Damper Opened"
     id: nilan_damper_opened
     register_type: read
     address: 115
@@ -169,7 +169,7 @@ binary_sensor:
 
 text_sensor:
   - platform: template
-    name: "Air filter alarm status"
+    name: "Air Filter Alarm Status"
     lambda: |-
       if (id(nilan_filter_alarm).state) {
         return {"Skift filter"};
@@ -180,7 +180,7 @@ text_sensor:
 number:
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Top temperature set"
+    name: "Top Temperature Set"
     id: nilan_top_temperature_set
     min_value: 15
     max_value: 55
@@ -192,7 +192,7 @@ number:
   
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Bottom temperature set"
+    name: "Bottom Temperature Set"
     id: nilan_bottom_temperature_set
     min_value: 15
     max_value: 55
