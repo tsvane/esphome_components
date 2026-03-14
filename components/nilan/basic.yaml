@@ -42,7 +42,7 @@ sensor:
 #########################
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "T3 - Exhaust temperature"
+    name: "T3 - Exhaust"
     id: nilan_exhaust_temp_t3
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -55,7 +55,7 @@ sensor:
       
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "T4 - Outlet temperature"
+    name: "T4 - Outlet"
     id: nilan_outlet_temp_t4
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -68,7 +68,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "T7 - Inlet (after heater) temperature"
+    name: "T7 - Inlet (after heater)"
     id: nilan_inlet_temp_t7
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -80,7 +80,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "T8 - Outdoor temperature"
+    name: "T8 - Outdoor"
     id: nilan_outdoor_temp_t8
     unit_of_measurement: °C
     accuracy_decimals: 1
