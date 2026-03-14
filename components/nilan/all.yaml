@@ -8,7 +8,7 @@ packages:
 select:
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Week program select"
+    name: "Week Program"
     id: nilan_week_program_select
     address: 500
     force_new_range: true
@@ -27,7 +27,7 @@ binary_sensor:
 #########################
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User function"
+    name: "User Function"
     id: nilan_user_function
     register_type: read
     address: 100
@@ -35,7 +35,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Smoke alarm"
+    name: "Smoke Alarm"
     id: nilan_smoke_alarm
     register_type: read
     address: 103
@@ -43,7 +43,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "High pressure switch"
+    name: "High Pressure Switch"
     id: nilan_high_pressure
     register_type: read
     address: 107
@@ -51,7 +51,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Summer mode"
+    name: "Summer Mode"
     id: nilan_is_summer
     register_type: read
     address: 1200
@@ -62,14 +62,14 @@ binary_sensor:
 ###########################
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User function active"
+    name: "User Function Active"
     id: nilan_user_function_active
     register_type: holding
     address: 123
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Defrost function active"
+    name: "Defrost Function Active"
     id: nilan_defrost_function_active
     register_type: holding
     address: 125
@@ -80,7 +80,7 @@ sensor:
 #########################
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Bus version"
+    name: "Bus Version"
     id: nilan_bus_version
     skip_updates: 60
     internal: true
@@ -103,7 +103,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "T10 - External room"
+    name: "T10 - External Room"
     id: nilan_extern_temp_t10
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -147,7 +147,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Active alarms"
+    name: "Active Alarms"
     id: nilan_active_alarms
     accuracy_decimals: 0
     register_type: read
@@ -155,7 +155,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Alarm list 1 id"
+    name: "Alarm List 1 ID"
     id: nilan_alarm_list_1_id
     accuracy_decimals: 0
     register_type: read
@@ -179,7 +179,7 @@ sensor:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Alarm list 2 id"
+    name: "Alarm List 2 ID"
     id: nilan_alarm_list_2_id
     accuracy_decimals: 0
     register_type: read
@@ -203,7 +203,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Alarm list 3 id"
+    name: "Alarm List 3 ID"
     id: nilan_alarm_list_3_id
     accuracy_decimals: 0
     register_type: read
@@ -227,7 +227,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Actual on⁄off state"
+    name: "Actual On⁄Off State"
     id: nilan_actual_on_off_state
     accuracy_decimals: 0
     register_type: read
@@ -243,7 +243,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Inlet temperature request"
+    name: "Inlet Temperature Request"
     id: nilan_inlet_temp_set
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -256,7 +256,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Actual value for controlled temperature"
+    name: "Actual Value for Controlled Temperature"
     id: nilan_temp_control
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -269,7 +269,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Actual room temperature"
+    name: "Actual Room Temperature"
     id: nilan_actual_room_temp
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -282,7 +282,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Requested capacity"
+    name: "Requested Capacity"
     id: nilan_requested_capacity
     unit_of_measurement: '%'
     accuracy_decimals: 0
@@ -293,7 +293,7 @@ sensor:
       
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Actual capacity"
+    name: "Actual Capacity"
     id: nilan_actual_capacity
     unit_of_measurement: '%'
     accuracy_decimals: 0
@@ -305,7 +305,7 @@ sensor:
 number:
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User time set (minutes)"
+    name: "User Time Set (Minutes)"
     id: nilan_user_time_set
     value_type: U_WORD
     min_value: 1.0
@@ -328,7 +328,7 @@ number:
   
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User ventilation speed set"
+    name: "User Ventilation Speed"
     id: nilan_user_ventilation_speed_set
     min_value: 0.0
     max_value: 4.0
@@ -339,7 +339,7 @@ number:
   
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User temperature set (Extend only)"
+    name: "User Temperature (Extend Only)"
     id: nilan_user_extend_temperature_set
     min_value: 15.0
     max_value: 30.0
@@ -350,7 +350,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User temperature set (Offset only)"
+    name: "User Temperature (Offset Only)"
     id: nilan_user_offset_temperature_set
     min_value: 15.0
     max_value: 30.0
@@ -361,7 +361,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Humidity low vent step"
+    name: "Humidity Low Vent Step"
     id: humidity_low_vent_step
     min_value: 0.0
     max_value: 4.0
@@ -372,7 +372,7 @@ number:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Humidity high vent step"
+    name: "Humidity High Vent Step"
     id: humidity_high_vent_step
     min_value: 0.0
     max_value: 4.0
@@ -383,7 +383,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Humidity limit low vent"
+    name: "Humidity Limit Low Vent"
     id: humidity_limit_low_vent    
     unit_of_measurement: '%'
     icon: "mdi:percent"
@@ -397,7 +397,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Humidity max time on high ventilation (minutes)"
+    name: "Humidity Max Time on High Ventilation (Minutes)"
     id: humidity_max_time_high_vent
     value_type: U_WORD
     unit_of_measurement: minutes
@@ -411,7 +411,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "CO2 high vent step"
+    name: "CO2 High Vent Step"
     id: co2_high_vent_step
     min_value: 0.0
     max_value: 4.0
@@ -422,7 +422,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "CO2 limit normal ventilation"
+    name: "CO2 Limit Normal Ventilation"
     id: co2_limit_normal_ventilation
     min_value: 400
     max_value: 750
@@ -434,7 +434,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "CO2 limit high ventilation"
+    name: "CO2 Limit High Ventilation"
     id: co2_limit_high_ventilation
     min_value: 650
     max_value: 800
@@ -519,7 +519,7 @@ text_sensor:
         ((second < 10) ? "0" : "") + std::to_string(second);
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Software version"
+    name: "Software Version"
     id: nilan_version_info
     skip_updates: 60
     register_type: read
@@ -554,7 +554,7 @@ text_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Actual user function"
+    name: "Actual User Function"
     id: nilan_actual_user_function
     register_type: holding
     address: 600
@@ -576,7 +576,7 @@ text_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Aggregate type"
+    name: "Aggregate Type"
     id: nilan_platform_id
     entity_category: diagnostic
     skip_updates: 60
@@ -629,7 +629,7 @@ text_sensor:
 switch:
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "On⁄Off state"
+    name: "On⁄Off State"
     id: nilan_on_off_state
     register_type: holding
     bitmask: 1
