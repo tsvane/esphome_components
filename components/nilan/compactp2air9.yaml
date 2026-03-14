@@ -61,7 +61,7 @@ sensor:
 # Input.T1_Intake 201 100 °C Fresh air intake temperature
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "T1 Intake"
+    name: "T1 Intake (Fresh air)"
     id: t1_intake
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -73,7 +73,7 @@ sensor:
 # Input.T2_Inlet 202 100 °C Inlet temperature (before heater)
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "T2 Inlet"
+    name: "T2 Inlet (Room)"
     id: t2_inlet
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -181,8 +181,8 @@ sensor:
 # Input.T11_Top 211 100 °C Hot water top temperature
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "T11 Top"
-    id: t11_top
+    name: "T11 Hotwater Top"
+    id: t11_hotwater_top
     unit_of_measurement: °C
     accuracy_decimals: 1
     device_class: temperature
@@ -193,8 +193,8 @@ sensor:
 # Input.T12_Bottom 212 100 °C Hot water bottom temperature
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "T12 Bottom"
-    id: t12_bottom
+    name: "T12 Hotwater Bottom"
+    id: t12_hotwater_bottom
     unit_of_measurement: °C
     accuracy_decimals: 1
     device_class: temperature
