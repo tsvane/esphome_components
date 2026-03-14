@@ -8,7 +8,7 @@ select:
       
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Set operation mode"
+    name: "Set Operation Mode"
     id: nilan_set_operation_mode
     address: 70
     value_type: U_WORD
@@ -25,7 +25,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Outlet temperature"
+    name: "T4 - Outlet"
     id: nilan_outlet_temp_t4
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -38,7 +38,7 @@ sensor:
       
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Inlet temperature"
+    name: "T2 - Inlet"
     id: nilan_inlet_temp_t2
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -50,7 +50,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Outdoor temperature"
+    name: "T1 - Outdoor"
     id: nilan_outdoor_temp_t1
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -63,7 +63,7 @@ sensor:
       
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Exhaust temperature"
+    name: "T3 - Exhaust"
     id: nilan_exhaust_temp_t3
     unit_of_measurement: °C
     accuracy_decimals: 1
@@ -88,7 +88,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Active alarms"
+    name: "Active Alarms"
     id: nilan_active_alarms
     accuracy_decimals: 0
     register_type: read
@@ -96,7 +96,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Alarm list 1 id"
+    name: "Alarm List 1 ID"
     id: nilan_alarm_list_1_id
     accuracy_decimals: 0
     register_type: read
@@ -104,7 +104,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Alarm list 1 info"
+    name: "Alarm List 1 Info"
     id: nilan_alarm_list_1_info
     accuracy_decimals: 0
     register_type: read
@@ -112,7 +112,7 @@ sensor:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Alarm list 2 id"
+    name: "Alarm List 2 ID"
     id: nilan_alarm_list_2_id
     accuracy_decimals: 0
     register_type: read
@@ -120,7 +120,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Alarm list 2 info"
+    name: "Alarm List 2 Info"
     id: nilan_alarm_list_2_info
     accuracy_decimals: 0
     register_type: read
@@ -128,7 +128,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Alarm list 3 id"
+    name: "Alarm List 3 ID"
     id: nilan_alarm_list_3_id
     accuracy_decimals: 0
     register_type: read
@@ -136,7 +136,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Alarm list 3 info"
+    name: "Alarm List 3 Info"
     id: nilan_alarm_list_3_info
     accuracy_decimals: 0
     register_type: read
@@ -144,7 +144,7 @@ sensor:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Actual fan step"
+    name: "Actual Fan Step"
     id: nilan_actual_fan_step
     accuracy_decimals: 0
     register_type: read
@@ -152,7 +152,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Days to next filter change"
+    name: "Days to Next Filter Change"
     id: nilan_days_to_next_filter_alarm
     unit_of_measurement: 'days'
     accuracy_decimals: 0
@@ -161,7 +161,7 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Exhaust fan speed"
+    name: "Exhaust Fan Speed"
     id: nilan_exhaust_fan_speed
     unit_of_measurement: '%'
     icon: "mdi:percent"
@@ -173,7 +173,7 @@ sensor:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Inlet fan speed"
+    name: "Inlet Fan Speed"
     id: nilan_inlet_fan_speed
     unit_of_measurement: '%'
     icon: "mdi:percent"
@@ -195,7 +195,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Air filter alarm"
+    name: "Air Filter Alarm"
     id: nilan_filter_alarm
     register_type: read
     address: 49
@@ -203,7 +203,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Summer mode"
+    name: "Summer Mode"
     id: nilan_is_summer
     register_type: read
     address: 72
@@ -217,10 +217,10 @@ binary_sensor:
 text_sensor:
   
   - platform: template
-    name: "Air filter alarm status"
+    name: "Air Filter Alarm Status"
     lambda: |-
       if (id(nilan_filter_alarm).state) {
-        return {"Skift filter"};
+        return {"Skift Filter"};
       } else {
         return {"Filter OK"};
       }  
@@ -228,7 +228,7 @@ number:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Ventilation speed set"
+    name: "Ventilation Speed"
     id: nilan_ventilation_speed_set
     min_value: 1
     max_value: 4
@@ -237,7 +237,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Temperature set"
+    name: "Temperature"
     id: nilan_target_temperature_set
     min_value: 10
     max_value: 30
@@ -247,7 +247,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User function 1 ventilation speed set"
+    name: "User Function 1 Ventilation Speed"
     id: nilan_userfct1_ventilation_speed_set
     min_value: 0.0
     max_value: 4.0
@@ -256,7 +256,7 @@ number:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User function 2 ventilation speed set"
+    name: "User Function 2 Ventilation Speed"
     id: nilan_userfct2_ventilation_speed_set
     min_value: 0.0
     max_value: 4.0
@@ -265,7 +265,7 @@ number:
  
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User function 1 time set (minutes)"
+    name: "User Function 1 Time Set (Minutes)"
     id: nilan_userfct1_time_set
     value_type: U_WORD
     min_value: 1.0
@@ -275,7 +275,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "User function 2 time set (minutes)"
+    name: "User Function 2 Time Set (Minutes)"
     id: nilan_userfct2_time_set
     value_type: U_WORD
     min_value: 1.0
@@ -285,7 +285,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Supply Air level 1"
+    name: "Supply Air Level 1"
     id: nilan_supply_level1
     min_value: 20
     max_value: 100
@@ -296,7 +296,7 @@ number:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Supply Air level 2"
+    name: "Supply Air Level 2"
     id: nilan_supply_level2
     min_value: 20
     max_value: 100
@@ -307,7 +307,7 @@ number:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Supply Air level 3"
+    name: "Supply Air Level 3"
     id: nilan_supply_level3
     min_value: 20
     max_value: 100
@@ -318,7 +318,7 @@ number:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Supply Air level 4"
+    name: "Supply Air Level 4"
     id: nilan_supply_level4
     min_value: 20
     max_value: 100
@@ -329,7 +329,7 @@ number:
 
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Extract Air level 1"
+    name: "Extract Air Level 1"
     id: nilan_extract_level1
     min_value: 20
     max_value: 100
@@ -340,7 +340,7 @@ number:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Extract Air level 2"
+    name: "Extract Air Level 2"
     id: nilan_extract_level2
     min_value: 20
     max_value: 100
@@ -351,7 +351,7 @@ number:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Extract Air level 3"
+    name: "Extract Air Level 3"
     id: nilan_extract_level3
     min_value: 20
     max_value: 100
@@ -362,7 +362,7 @@ number:
     
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Extract Air level 4"
+    name: "Extract Air Level 4"
     id: nilan_extract_level4
     min_value: 20
     max_value: 100
@@ -374,7 +374,7 @@ number:
 switch:
   - platform: modbus_controller
     modbus_controller_id: nilan_modbus_controller
-    name: "Reset filter timer"
+    name: "Reset Filter Timer"
     id: nilan_filter_reset
     register_type: holding
     bitmask: 1
